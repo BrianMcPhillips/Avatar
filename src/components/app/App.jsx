@@ -1,5 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
+import ItemList from '../ItemList/ItemList';
 
-export default function App() {
-  return <h1>Hello World</h1>;
+export default class App extends Component {
+  render() {
+    return (
+      <>
+        <ItemList /> 
+      </>
+    );
+  }
 }
+
