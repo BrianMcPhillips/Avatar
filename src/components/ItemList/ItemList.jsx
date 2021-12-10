@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Item from './Item/Item';
 
 export default class ItemList extends Component {
   state = {
@@ -13,9 +14,12 @@ export default class ItemList extends Component {
 
 
   render() {
+    const { data } = this.state;
     return (
       <div>
-        
+        {
+          data.map(character => <Item key={character._id} data={character}/>)
+        }
       </div>
     );
   }
