@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Link from 'react-router-dom';
 
 const Item = ({ 
   data: {
@@ -9,7 +10,9 @@ const Item = ({
   }
 }) => (
   <div>
-    <img src={photoUrl} alt={name} />
+    <Link to={`/detail/${_id}`}>
+      <img src={photoUrl} alt={name} />
+    </Link>
     <h3>{name}</h3>
   </div>
 
