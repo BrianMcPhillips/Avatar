@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
-  Switch,
-  Route
+  Route,
+  Switch
 } from 'react-router-dom';
 import ItemList from '../ItemList/ItemList';
+import DetailPage from '../DetailPage/DetailPage';
 
 export default class App extends Component {
   render() {
@@ -17,15 +18,17 @@ export default class App extends Component {
               exact
               render={(routerProps) => <ItemList {...routerProps} />}
             />
-            {/* <Route 
+            <Route 
               path="/detail/:avatarId"
               exact
-              render={(routerProps) => <}
-            /> */}
+              render={(routerProps) => <DetailPage {...routerProps} />}
+            />
           </Switch>
-        </Router>
+        </Router> 
       </>
     );
   }
 }
+
+
 
